@@ -37,3 +37,8 @@ sudo apt-get install -y python-certbot-apache
 sudo certbot --apache certonly
 #add domain
 sudo a2enmod ssl
+sudo a2enmod rewrite
+sudo a2enmod proxy
+sudo a2enmod proxy_http
+sudo a2enmod proxy_balancer
+sudo a2enmod lbmethod_byrequests
