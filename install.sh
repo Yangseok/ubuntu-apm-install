@@ -43,12 +43,6 @@ sudo a2enmod proxy_http
 sudo a2enmod proxy_balancer
 sudo a2enmod lbmethod_byrequests
 
-$sudo vim /etc/apache2/apache2.conf
-열어서 제일 하단에
-<IfModule mod_rewrite.c>
-rewriteEngine On
-</IfModule>
-
 sudo vim /etc/apache2/sites-enabled/000-default
 <Directory /var/www>
 Options Indexes FollowSymLinks MultiViews
