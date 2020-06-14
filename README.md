@@ -4,4 +4,4 @@ cd ubuntu-apm-install
 
 chmod +x install.sh
 
-./install.sh
+sudo ./install.sh
