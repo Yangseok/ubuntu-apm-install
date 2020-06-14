@@ -45,11 +45,11 @@ sudo a2enmod proxy_http
 sudo a2enmod proxy_balancer
 sudo a2enmod lbmethod_byrequests
 
-sudo vim /etc/apache2/sites-enabled/000-default
-<Directory /var/www>
-Options Indexes FollowSymLinks MultiViews
-AllowOverride All
-Order allow,deny
-</Directory>
+#sudo vim /etc/apache2/sites-enabled/000-default
+#<Directory /var/www>
+#Options Indexes FollowSymLinks MultiViews
+#AllowOverride All
+#Order allow,deny
+#</Directory>
 
 sudo systemctl restart apache2
