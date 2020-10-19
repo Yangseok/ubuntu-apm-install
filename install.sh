@@ -74,4 +74,6 @@ php -r "unlink('composer-setup.php');"
 #rdate install
 sudo apt install -y rdate
 /usr/bin/rdate -s time.bora.net >/dev/null 2>&1
+
+# UTC -> KST : https://twpower.github.io/95-set-ubuntu-timezone
 sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
