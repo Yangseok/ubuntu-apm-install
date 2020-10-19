@@ -29,16 +29,7 @@ sudo pecl install mcrypt-1.0.1
 sudo echo "extension=mcrypt.so" | sudo tee -a /etc/php/7.2/apache2/conf.d/mcrypt.ini
 
 sudo apt install -y php-mysql
-sudo systemctl restart apache2.service
 
-#Let’s Encrypt
-#https://hiseon.me/server/letsencrypt-ssl-certificate/ 
-sudo apt-get update
-sudo apt-get install -y software-properties-common
-sudo add-apt-repository ppa:certbot/certbot
-sudo apt-get update
-sudo apt-get install -y python-certbot-apache 
-sudo certbot --apache certonly
 #add domain
 sudo a2enmod ssl
 sudo a2enmod rewrite
@@ -46,6 +37,22 @@ sudo a2enmod proxy
 sudo a2enmod proxy_http
 sudo a2enmod proxy_balancer
 sudo a2enmod lbmethod_byrequests
+
+sudo systemctl restart apache2.service
+
+#Let’s Encrypt
+# ubuntu 18.04
+#sudo apt-get update
+#sudo apt-get install -y software-properties-common
+#sudo add-apt-repository ppa:certbot/certbot
+#sudo apt-get update
+#sudo apt-get install -y python-certbot-apache 
+#sudo certbot --apache certonly
+
+#ubuntu 20.04
+sudo snap install --classic certbot
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+sudo certbot --apache certonly
 
 #sudo vim /etc/apache2/sites-enabled/000-default
 #<Directory /var/www>
