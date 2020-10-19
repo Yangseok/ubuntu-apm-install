@@ -21,7 +21,7 @@ sudo systemctl restart apache2.service
 ##sudo systemctl enable mariadb.service
 ##sudo systemctl restart mariadb.service
 
-sudo apt install -y php php-bz2 php-common php-cli php-curl php-date php-xml php-gd php-gettext php-json php-mbstring php-mysql php-readline php-soap php-sqlite3 php-tokenizer php-xml php-xmlrpc unzip net-tools
+sudo apt install -y php php-bz2 php-common php-cli php-curl php-date php-xml php-gd php-zip php-json php-mbstring php-mysql php-readline php-soap php-sqlite3 php-tokenizer php-xml php-xmlrpc unzip net-tools
 
 sudo apt install -y php-dev libmcrypt-dev gcc make autoconf libc-dev pkg-config
 sudo pecl install mcrypt-1.0.1
