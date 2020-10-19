@@ -74,6 +74,4 @@ php -r "unlink('composer-setup.php');"
 #rdate install
 sudo apt install -y rdate
 /usr/bin/rdate -s time.bora.net >/dev/null 2>&1
-sudo rm /etc/localtime
-sudo ln -s /usr/share/zoneinfo/Asia/Seoul
-sudo reboot
+sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
