@@ -83,6 +83,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
 nvm install node
 
 #mongodb driver
+#레퍼런스 https://docs.mongodb.com/drivers/php, https://github.com/jenssegers/laravel-mongodb
 sudo pecl install mongodb
 #add the following line to your php.ini file: extension=mongodb.so
 #composer require mongodb/mongodb or composer require jenssegers/mongodb
