@@ -21,9 +21,9 @@ sudo systemctl restart apache2.service
 ##sudo systemctl enable mariadb.service
 ##sudo systemctl restart mariadb.service
 
-sudo apt install -y php php-bz2 php-common php-cli php-curl php-date php-xml php-gd php-zip php-json php-mbstring php-mysql php-readline php-soap php-sqlite3 php-tokenizer php-xml php-xmlrpc unzip net-tools
+sudo apt install -y php php-bz2 php-common php-cli php-curl php-date php-xml php-gd php-zip php-json php-mbstring php-mysql php-readline php-soap php-dev php-pear php-sqlite3 php-tokenizer php-xml php-xmlrpc unzip net-tools
 
-sudo apt install -y php-dev libmcrypt-dev gcc make autoconf libc-dev pkg-config
+sudo apt install -y libmcrypt-dev gcc make autoconf libc-dev pkg-config
 sudo pecl install mcrypt-1.0.1
 # enter
 sudo echo "extension=mcrypt.so" | sudo tee -a /etc/php/7.2/apache2/conf.d/mcrypt.ini
@@ -77,3 +77,12 @@ sudo apt install -y rdate
 
 # UTC -> KST : https://twpower.github.io/95-set-ubuntu-timezone
 sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
+
+#nvm install
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
+nvm install node
+
+#mongodb driver
+sudo pecl install mongodb
+#add the following line to your php.ini file: extension=mongodb.so
+#composer require mongodb/mongodb or composer require jenssegers/mongodb
