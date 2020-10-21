@@ -28,8 +28,6 @@ sudo pecl install mcrypt-1.0.1
 # enter
 sudo echo "extension=mcrypt.so" | sudo tee -a /etc/php/7.2/apache2/conf.d/mcrypt.ini
 
-sudo apt install -y php-mysql
-
 #add domain
 sudo a2enmod ssl
 sudo a2enmod rewrite
