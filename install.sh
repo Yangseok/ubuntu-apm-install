@@ -24,6 +24,9 @@ sudo systemctl restart apache2.service
 sudo apt install -y php php-bz2 php-common php-cli php-curl php-date php-xml php-gd php-zip php-json php-mbstring php-mysql php-readline php-soap php-dev php-pear php-sqlite3 php-tokenizer php-xml php-xmlrpc unzip net-tools
 
 sudo apt install -y libmcrypt-dev gcc make autoconf libc-dev pkg-config
+#If php version > 7.3.0
+sudo pecl install mcrypt-1.0.2
+#If php version <= 7.3.0
 sudo pecl install mcrypt-1.0.1
 # enter
 sudo echo "extension=mcrypt.so" | sudo tee -a /etc/php/7.2/apache2/conf.d/mcrypt.ini
