@@ -25,7 +25,7 @@ sudo apt install -y php php-bz2 php-common php-cli php-curl php-date php-xml php
 
 sudo apt install -y libmcrypt-dev gcc make autoconf libc-dev pkg-config
 #If php version > 7.3.0
-sudo pecl install mcrypt-1.0.2
+sudo pecl install mcrypt-1.0.4
 #If php version <= 7.3.0
 sudo pecl install mcrypt-1.0.1
 # enter
